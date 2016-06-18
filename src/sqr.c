@@ -1,5 +1,5 @@
 #include "sqr.h"
-#include < math.h >
+#include <math.h>
 
 int quadratic_equation(float a, float b, float d, float *x1, float *x2) {
 	if (d > 0) {
