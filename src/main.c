@@ -2,7 +2,8 @@
 #include <math.h>
 #include "sqr.h"
 
-int main () {
+int main () 
+{
 	float a, b, c, d, x1, x2;
 
 	printf("input coefficients:\n");
@@ -13,17 +14,20 @@ int main () {
 
 	d = (b * b) - (4 * a * c);
 
-	int result = quadratic_equation(a, b, d, &x1, &x2);
+	int result = quad(a, b, d, &x1, &x2);
 
-	if (result == FOUND_2_ROOTS) {
-		printf("roots: x1 = %2.2f, x2 = %2.2f", x1, x2);
+	if (result == FOUND_2_ROOTS) 
+	{
+		printf("x1 = %2.2f, x2 = %2.2f", x1, x2);
 	}
 
-	if (result == FOUND_1_ROOT) {
-		printf("one root: x1 = %2.2f", x1);
+	if (result == FOUND_1_ROOT) 
+	{
+		printf("x1 = x2 = %2.2f", x1);
 	}
 
-	if (result == ROOT_NOT_FOUND) {
+	if (result == ROOT_NOT_FOUND) 
+	{
 		printf("no roots");
 	}
 
